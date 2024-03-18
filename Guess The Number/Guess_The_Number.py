@@ -14,11 +14,14 @@
 
 correct_number = 4
 user_guess = input("Guess a number between 1 and 10: ")
-user_guess = int(user_guess)
+user_guess_int = int(user_guess)
 correct_number_str = str(correct_number)
-if user_guess == correct_number:
+if (user_guess_int == correct_number):
     print("Congratulations! That's correct!")
-elif user_guess == 3 or user_guess == 5:
+elif (user_guess_int + 1 == correct_number):
+    print("But you were very close! The correct number was " +
+          correct_number_str + ".")
+elif (user_guess_int - 1 == correct_number):
     print("But you were very close! The correct number was " +
           correct_number_str + ".")
 else:
